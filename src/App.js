@@ -27,7 +27,7 @@ const App = (props) => {
         <AddedFeatures car={props.carOnProps} />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} />
+        <AdditionalFeatures additionalFeatures={props.additionalFeatures} buyItem={buyItem}/>
         <Total car={props.carOnProps} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -37,9 +37,9 @@ const App = (props) => {
 const mapStateToProps = state => {
   return {
     carOnProps: state.car,
-    store: state.store,
+    additonalFeatures: state.additionalFeatures,
     additionalPrice: state.additionalPrice
   };
 };
 
-export default connect(mapStateToProps, {})(App); 
+export default connect(mapStateToProps, {addFeature})(App); 

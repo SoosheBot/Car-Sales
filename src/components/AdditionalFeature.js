@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 const AdditionalFeature = props => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button" onClick={()=> props.addFeature(props.feature)}>Add</button>
+      <button className="button" onClick={() => {
+        props.buyItem(props.feature)
+      }}>Add Feature</button>
       {props.feature.name} (+{props.feature.price})
     </li>
   );
