@@ -16,9 +16,9 @@ const App = (props) => {
   //   // dispatch an action here to remove an item
   // };
 
-  const buyItem = item => {
-    props.addFeature(item);
-  };
+  // const buyItem = item => {
+  //   props.addFeature(item);
+  // };
 
   return (
     <div className="boxes">
@@ -27,8 +27,8 @@ const App = (props) => {
         <AddedFeatures car={props.carOnProps} />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} buyItem={buyItem}/>
-        <Total car={props.carOnProps} additionalPrice={props.additionalPrice} />
+        <AdditionalFeatures additionalFeatures={props.additionalFeaturesOnProps}/>
+        <Total car={props.carOnProps} additionalPrice={props.additionalPriceOnProps} />
       </div>
     </div>
   );
@@ -37,8 +37,8 @@ const App = (props) => {
 const mapStateToProps = state => {
   return {
     carOnProps: state.car,
-    additonalFeatures: state.additionalFeatures,
-    additionalPrice: state.additionalPrice
+    additonalFeaturesOnProps: state.additionalFeatures,
+    additionalPriceOnProps: state.additionalPrice
   };
 };
 
