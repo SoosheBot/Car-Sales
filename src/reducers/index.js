@@ -1,8 +1,9 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import { addedFeaturesReducer } from './addedFeaturesReducer';
-import { additionalFeaturesReducer } from './additionalFeaturesReducer';
+import { addedFeaturesReducer } from "./addedFeaturesReducer";
+import { additionalFeaturesReducer } from "./additionalFeaturesReducer";
 
 export default combineReducers({
-    addedFeaturesReducer, additionalFeaturesReducer
+  addedFeaturesReducer,
+  additionalFeaturesReducer
 });
